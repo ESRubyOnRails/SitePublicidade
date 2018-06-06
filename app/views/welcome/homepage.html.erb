@@ -1,0 +1,134 @@
+
+<head>
+</head>
+<body>
+    <div class="main-menu lef-navigator">
+        <div class="logo-menu">
+            <%= image_tag('hpta-logo.png')%>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li style="margin-top: 0 !important"><a class="active" href="homepage" >HOME</a>
+                <li><a href="#about">SOBRE NÓS</a></li>
+                <li><a href="#divider">PORTFÓLIO</a></li>
+                <li><a href="#forms-w">CONTATO</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icons">
+            <a href="https://www.facebook.com"><%= image_tag(('facebook-icon.png'), :class => 'icon-first')%></a>
+            <a href="https://www.gmail.com"><%= image_tag('gmail-icon.png')%></a>
+            <a href="https://www.instagram.com"><%= image_tag('instagram-icon.png')%></a>
+            <a href="https://www.linkedin.com"><%= image_tag('linkedin-icon.png')%></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><%= image_tag('banner-1.png') %></li>
+                <li><%= image_tag('site.jpg') %></li>
+            </ul>
+        </div>
+        <section class="section" id="about">
+           <div class="about">
+               <div class="about-us">
+                    <h2>SOBRE NÓS</h2>
+                    <p>Somos Hiperativa! Um estúdio de disign gráfico especializado<br>
+                    em branding e identidade visual. Nosso foco é criar projetos<br>
+                    criativos que valorizem marcas, produtos e serviços.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="column-1 col-3">
+                        <%= image_tag(('bran-visu.png'), :class => 'about-images') %>
+                        <h4>BRANDING &<br> IDENTIDADE VISUAL</h3>
+                        <p>Criamos todo universo visual e verbal alinhado com a estratégia e posicionamento da sua marca.</p>
+                    </div>
+                    <div class="column-2 col-3">
+                        <%= image_tag(('webdesign.png'), :class => 'about-images') %>
+                        <h4>WEBDESIGN</h3>
+                        <p>Desenvolvemos sites, aplicativos e plataformas digitais responsivas que impulsionam sua empresa na web.</p>
+                    </div>
+                    <div class="column-3 col-3">
+                        <%= image_tag(('digi-brand.png'), :class => 'about-images') %>
+                        <h4>DIGITAL BRANDING</h3>
+                        <p>Posicionamos sua marca no ambiente digital e engajamos seu público, trazendo mais oportunidades para seu negócio.</p>
+                    </div>
+                    <div class="column-4 col-3">
+                        <%= image_tag(('apresentacoes.png'), :class => 'about-images') %>
+                        <h4>APRESENTAÇÕES</h3>
+                        <p>Criamos apresentações visuais, utilizando o design como ferramenta para alavancar o potencial das suas ideias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="divider" id="divider">
+        </section>
+        <section class="section">
+            <div class="title-portfolio">
+                <h2>PORTFÓLIO</h2>
+                <p>Conheça nossos projetos</p>
+            </div>
+            <div class="portfolio-links">
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+                <div class="links link-1">
+                    <a href="https://www.behance.net/gallery/41472301/Branding-Clinica-Infinity">
+                        <%= image_tag(('banner-1.png'), :class => 'link-images') %>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="section">
+            <div class="contact">
+                <h2>CONTATO</h2>
+                <p>Vamos ser perceiros? Entre em contato com a gente!<br>
+                    Trabalhamos online.
+                </p>
+            </div>
+            <div class="forms-w" id="forms-w">
+                <%= render 'contact' %>
+                <p>Quer receber e-mails com promoções?</p>
+                <button class="btn-register" type="button"><a href="/register">Cadastre-se</a></button>
+            </div>
+        </section>
+    </div>
+<script>
+    $(document).on("turbolinks:load", function() {
+        $('.flexslider').flexslider();
+    });
+</script>
+</body>
