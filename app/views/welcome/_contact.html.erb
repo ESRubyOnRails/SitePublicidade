@@ -1,7 +1,6 @@
 <%= form_for Contact.new do |f| %>
 
   <% flash.each do |key, value| %>
-  <% byebug %>
     <% if key == 'success' %>
       <div class="alert-success">
         <%= value %>
