@@ -1,0 +1,31 @@
+<%= form_with scope: :register, url: register_path, local: true do |f| %>
+<% if register.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(register.errors.count, "error") %> Não deu</h2>
+
+    <ul>
+    <% register.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="boxer">
+    <div class="forms">
+        <%= f.label :nome, class:"label-forms" %><br>
+        <%= f.text_field :nome, class:"input-forms" %>
+    </div>
+
+    <div class="forms">
+      <%= f.label :email, class:"label-forms" %><br>
+      <%= f.text_field :email, class:"input-forms" %>
+    </div>
+
+    <div class="forms btn-forms">
+      <%= f.submit "Cadastrar", class: "btn-cad" %>
+    </div>
+  </div>
+  <div class="boxer-back">
+    <button class="btn-back" type="button"><a href="welcome/homepage">Voltar</a></button>
+  </div>
+<% end %>
